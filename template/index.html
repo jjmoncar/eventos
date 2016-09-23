@@ -1,0 +1,144 @@
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>.::Eventos::.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src='{% static "assets/js/ie/html5shiv.js" %}'></script><![endif]-->
+		<link rel="stylesheet" href='{% static "assets/css/main.css" %}' />
+		<!--[if lte IE 8]><link rel="stylesheet" href='{% static "assets/css/ie8.css" %}' /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href='{% static "assets/css/ie9.css" %}' /><![endif]-->
+	</head>
+	<body>
+		<!-- Header -->
+			<section id="header">
+				
+				<div class="inner">
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" href="#one" class="navbar-toggle button scrolly" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							  <span class="sr-only">Eventos</span>
+							</button>
+							<button type="button" href="#two" class="navbar-toggle button scrolly" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							  <span class="sr-only">Aplicaciones</span>
+							</button>
+							<button type="button" href="#three" class="navbar-toggle button scrolly" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							  <span class="sr-only">Noticias</span>
+							</button>
+		  </div>
+	</nav>
+					<h1>Bienvenidos a nuestro Portal Web</h1>
+					<p>Noticias, eventos y aplicativos de tu interes</p>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+					<div class="row 150%">
+						<div class="6u 12u$(medium)">
+							<header class="major">
+								<h2>Eventos</h2>
+							</header>
+							<p>Aqui apareceran todos los eventos que se encuentren registrados en la bd</p>
+						</div>
+						<div class="6u$ 12u$(medium) important(medium)">
+							<span class="image fit"><img src='{% static "images/uno.jpg" %}' /></span>
+						</div>
+						<ul class="actions">
+							<li><a href="#header" class="button scrolly">Arriba</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2">
+				<div class="container">
+					<div class="row 150%">
+						<div class="6u 12u$(medium)">
+							<ul class="major-icons">
+								<li><span class="icon style1 major fa-code"></span></li>
+								<li><span class="icon style2 major fa-bolt"></span></li>
+								<li><span class="icon style3 major fa-camera-retro"></span></li>
+								<li><span class="icon style4 major fa-cog"></span></li>
+								<li><span class="icon style5 major fa-desktop"></span></li>
+								<li><span class="icon style6 major fa-calendar"></span></li>
+							</ul>
+						</div>
+						<div class="6u$ 12u$(medium)">
+							<header class="major">
+								<h2>Aplicaciones</h2>
+							</header>
+							<p>Aqui se mostraran todas las aplicaciones que esten almacenadas en la bd	
+							</p>
+							<ul class="actions">
+								<li><a href="#header" class="button scrolly">Arriba</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="main style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>Noticias</h2>
+					</header>
+					<p>Aqui se colocaran todas las noticias que se agreguen a la bd.</p>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							<span class="image fit"><img src='{% static "images/dos.jpg" %}' /></span>
+							<h3>Noticia 1</h3>
+							<p>Por solo <strong>100$</strong> al año usted tendrá las mejores condiciones competitivas en la web,
+							contando con un sitio con tecnlogia de punta y adaptable a cualquier dispositivo.</p>
+						</div>
+						<div class="4u 12u$(medium)">
+							<span class="image fit"><img src='{% static "images/tres.jpg" %}' /></span>
+							<h3>Noticia 2</h3>
+							<p>Estamos en la busqueda de excelentes clientes como usted, por eso solo por este mes
+							<strong>los primeros 20 suscriptores tendran 3 meses de servicio adicionales gratis!</strong></p>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<span class="image fit"><img src='{% static "images/cuatro.png" %}' /></span>
+							<h3>Noticia 3</h3>
+							<p>Despues de su primer año en la web, solo debe invertir en el costo de dominio y hosting; lo cual
+							representa solo un 30% aproximadamente de su inversión inicial.</p>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><a href="#header" class="button scrolly">Arriba</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" target="_blank" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" target="_blank" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Eventos</li><li>Design: <a href="#">Eventos.com</a></li>
+				</ul>
+			</section>
+
+		<!-- Scripts -->
+			<script src='{% static "assets/js/jquery.min.js" %}'></script>
+			<script src='{% static "assets/js/jquery.scrolly.min.js" %}'></script>
+			<script src='{% static "assets/js/skel.min.js" %}'></script>
+			<script src='{% static "assets/js/util.js" %}'></script>
+			<!--[if lte IE 8]><script src='{% static "assets/js/ie/respond.min.js" %}'></script><![endif]-->
+			<script src='{% static "assets/js/main.js" %}'></script>
+
+	</body>
+</html>

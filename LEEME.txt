@@ -1,0 +1,47 @@
+
+ ╔════════════════════════════════════════════════════════════════════════════╗
+ ║                                                                            ║
+ ║   Eventos - a Python-Django Project                                        ║
+ ║                                                                            ║
+ ║   Version     : 0.0.1 (Beta prototipo)                                     ║
+ ║   Hecho por   : Ing. Julio Montaño - Ing. Francisco Silva        	      ║
+ ║   Última actualización : 01/03/2015                                        ║
+ ║                                                                            ║
+ ╚════════════════════════════════════════════════════════════════════════════╝
+
+ ≡ ATENCION ────────────────────────────────────────────
+
+Esta distribución constituye una versión beta, un simple prototipo. No se encuentra culminada en su totalidad, ni se recomienda instalar en producción. Solo constituye
+una guia para visualizar los avances y definir el desarrollo posterior y final del proyecto. En este sentido, los involucrados deben realizar todas las observaciones
+pertinentes con el fin de continuar a la proxima fase.
+
+ ≡ Requisitos de Hardware ────────────────────────────────────────────
+- Computador i386 compatible
+- Monitor SVGA 17"
+- Disco Duro 80 gb
+- Mouse, teclado
+- Tarjeta de Red
+
+ ≡ Requisitos de Software (entorno de desarrollo) ────────────────────────────────────────────
+- Sistema Operativo GNU/Linux (Debian, Ubuntu, Linux Mint o derivados; estable o testing)
+- Lenguaje de Programación Python 2.7
+- Django Framework 1.10 o superior. 
+- SGBD Postgresql 9.5 o superior
+
+ ≡ Instalacion ────────────────────────────────────────────
+- Copie la carpeta "eventos" en el Home de su pc; por ejemplo: /home/Usuario. Si es usuario Windows puede copiarla en la carpeta "Mis Documentos" (recomendable).
+- Abra su frontend para postgresql y cree una base de datos con el nombre "eventos".
+- Asegurese de tener instalado los siguientes paquetes adicionales: python-psycopg2. Si desconocce como realizar el proceso de instalacion de las librerias, contacte a algunos de los desarrolladores.
+- Sincronice el modelo con la base de datos. Para ellos abra una consola o terminal linux, y ubiquese en la carpeta eventos y tipee lo siguiente: 
+	- python manage.py makemigrations
+	- python manage.py makemigrations appEventos
+	- python manage.py migrate
+	- python manage.py createsuperuser (para utilizar la interfaz administrativa del framework)
+- Lea detenidamente las instrucciones que se le presentan y complete los datos.
+- Corra el servidor de desarrollo. para ellos en la consola o terminal linux, escriba: python manage.py runserver.
+- Abra el navegador web de su preferencia y coloque en la url: http://localhost:8000
+- Si por alguna razon presenta algun error o no puede completar alguno de los pasos descritos anteriormente, contacte a los desarrolladores por el siguiente email: jjmoncar@gmail.com - franaliado@gmail.com
+
+IMPORTANTE: Todos los pasos descritos anteriormente, son para un servidor de desarrollo. La instalacion en un servidor de produccion puede consultarse en la siguiente direccion: http://www.django-project.com
+
+NOTA FINAL: Recuerde que Django es un framework escrito en python y sus desarrolladores hacen enfasis en la simplicidad; por tanto el modulo de administracion de usuarios se crea por defecto al momento de sincronizar la base de datos con el modelo. Para acceder al modulo de administracion y gestionar los diferentes usuarios del sistema, acceda a la siguiente direccion con el servidor de desarrollo corriendo: http://localhost:8000/admin y coloque el nombre de usuario y contraseña que usted creo.

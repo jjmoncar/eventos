@@ -1,0 +1,31 @@
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Ayuda</a></li>
+  <li><a href="#!">Acerca de</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'registrarUsuario' %}">Usuarios</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'logout' %}">logout</a></li>
+</ul>
+<br>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="{% url 'noticiaListar' %}">Noticias</a></li>
+      <li><a href="#">Eventos</a></li>
+      <li><a href="#">Apps</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Opciones<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<script>
+$(function() {
+	$(".dropdown-button").dropdown({
+		constrain_width: true,
+		alignment: 'left'
+		});
+});
+</script>

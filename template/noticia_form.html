@@ -1,0 +1,94 @@
+{% extends "template/base.html" %}
+
+{% block content %}
+{% include "template/menu.html" %}
+
+<div class="container">
+<form method="post" enctype='multipart/form-data'>
+{% csrf_token %}
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">edit</i>
+          <input id="id" type="text" class="validate" name="id">
+          <label for="id">id:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">perm_identity</i>
+          <input id="titulo" type="text" class="validate" name="titulo">
+          <label for="titulo">Titulo:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">group</i>
+          <input id="sub_titulo" type="text" class="validate" name="sub-titulo">
+          <label for="sub_titulo">Sub Titulo:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">email</i>
+		  <textarea id="descripcion" name="descripcion" class="validate" col="10" rows="10"></textarea>
+          <label for="descripcion">Descripcion:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">done</i>
+          <input id="imagen" type="file" class="validate" name="imagen">
+          <label for="imagen">Imagen:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">done</i>
+          <input id="video" type="file" class="validate" name="video">
+          <label for="video">Video:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">done_all</i>
+          <input id="tags" type="text" class="validate" name="tags">
+          <label for="tags">Tags:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">done_all</i>
+          <input id="autor" type="text" class="validate" name="autor">
+          <label for="autor">Autor:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">done_all</i>
+          <input id="fecha" type="text" class="validate" name="fecha">
+          <label for="fecha">Fecha:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">done_all</i>
+          <input id="valoracion" type="number" class="validate" name="valoracion">
+          <label for="valoracion">Valoración:</label>
+	</div>
+</div>
+
+<button type="submit" class="btn">Enviar</button>
+</form>
+</div>
+
+{% endblock %}

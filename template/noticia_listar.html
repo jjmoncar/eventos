@@ -1,0 +1,48 @@
+{% extends "template/base.html" %}
+
+{% block content %}
+{% include "template/menu.html" %}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<td>Id</td>
+			<td>Titulo</td>
+			<td>Subtitulo</td>
+			<td>Descripción</td>
+			<td>Autor</td>
+			<td>Fecha</td>
+			<td>Valoración</td>
+		</tr>
+	</thead>
+	<tbody>
+		{% if object_list %}
+		{% for consultaNoticia in object_list %}
+		<tr>
+			<td>{{ consultaNoticia.id_noticias }}</td>
+			<td>{{ consultaNoticia.titulo.upper }}</td>
+			<td>{{ consultaNoticia.sub_titulo }}</td>
+			<td>{{ consultaNoticia.descripcion }}</td>
+			<td>{{ consultaNoticia.autor }}</td>
+			<td>{{ consultaNoticia.fecha }}</td>
+			<td>{{ consultaNoticia.valoracion }}</td>
+		</tr>
+		{% endfor %}
+		{% else %}
+			<p><h2>No Existen Datos para Mostrar!</h2></p>
+		{% endif %}
+	</tbody>
+</table>
+<ul class="pager">
+	<li>
+		{% if page_obj.has_previous %}
+		<a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+		{% endif %}
+	</li>
+	<li>
+		{% if page_obj.has_next %}
+		<a href="?page={{ page_obj.next_page_number }}">Next</a>
+		{% endif %}
+	</li>
+</ul>
+{% endblock %}
