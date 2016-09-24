@@ -2,7 +2,7 @@ from django.shortcuts import render, render_to_response
 from django.contrib.auth.models import User 
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
-from django.views.generic import ListView, TemplateView, CreateView
+from django.views.generic import ListView, TemplateView, CreateView, UpdateView
 from appEventos.models import noticia, recurso, evento
 from appEventos.forms import NoticiaForm, RecursoForm, EventoForm, RegistroForm
 
@@ -24,6 +24,12 @@ class NoticiaCreate(CreateView):
 	form_class = NoticiaForm
 	success_message = "Noticia Creada con Exito!"
 	success_url = reverse_lazy('principal')
+	
+class NoticiaUpdate(UpdateView):
+	model = noticia
+	template_name = 'template/noticia_form.html'
+	form_class = NoticiaForm
+	success_url = reverse_lazy('noticiaListar')
 
 class RecursoCreate(CreateView):
 	model = recurso

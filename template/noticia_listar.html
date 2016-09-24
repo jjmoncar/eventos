@@ -13,6 +13,7 @@
 			<td>Autor</td>
 			<td>Fecha</td>
 			<td>Valoración</td>
+			<td>Acciones</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -26,6 +27,10 @@
 			<td>{{ consultaNoticia.autor }}</td>
 			<td>{{ consultaNoticia.fecha }}</td>
 			<td>{{ consultaNoticia.valoracion }}</td>
+			<td>
+				<a class="btn waves-effect waves-light" href="{% url 'noticiaEditar' consultaNoticia.id_noticias %}"><i class="material-icons right">edit</i>Editar</a>
+				<a class="btn waves-effect waves-light" href="#"><i class="material-icons right">delete</i>Inhabilitar</a>
+			</td>
 		</tr>
 		{% endfor %}
 		{% else %}

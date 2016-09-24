@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from appEventos.views import principal, NoticiaCreate, RecursoCreate, EventoCreate, Inicio, RegistrarUsuario, noticia_list
+from appEventos.views import principal, NoticiaCreate, RecursoCreate, EventoCreate, Inicio, RegistrarUsuario, noticia_list, NoticiaUpdate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import login, logout_then_login, password_reset, password_reset_done, password_reset_confirm, password_reset_complete
 
@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^principal/', login_required(principal.as_view()), name='principal'),
     url(r'^nuevaNoticia/', login_required(NoticiaCreate.as_view()), name='nuevaNoticia'),
     url(r'^noticiaListar/', login_required(noticia_list.as_view()), name='noticiaListar'),
+    url(r'^noticiaEditar/(?P<pk>[0-9]+)/$', login_required(NoticiaUpdate.as_view()), name='noticiaEditar'),
     url(r'^nuevoRecurso/', login_required(RecursoCreate.as_view()), name='nuevoRecurso'),
     url(r'^nuevoEvento/', login_required(EventoCreate.as_view()), name='nuevoEvento'),
     url(r'^registrarUsuario/', login_required(RegistrarUsuario.as_view()), name='registrarUsuario'),
