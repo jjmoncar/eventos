@@ -22,30 +22,38 @@ class NoticiaCreate(CreateView):
 	model = noticia
 	template_name = 'template/noticia_form.html'
 	form_class = NoticiaForm
-	success_message = "Noticia Creada con Exito!"
 	success_url = reverse_lazy('principal')
 	
 class NoticiaUpdate(UpdateView):
 	model = noticia
 	template_name = 'template/noticia_form.html'
 	form_class = NoticiaForm
-	success_url = reverse_lazy('noticiaListar')
+	success_url = reverse_lazy('principal')
 
 class RecursoCreate(CreateView):
 	model = recurso
 	template_name = 'template/recurso_form.html'
 	form_class = RecursoForm
-	success_message = "Recurso Creado con Exito!"
 	success_url = reverse_lazy('principal')
 	
 class EventoCreate(CreateView):
 	model = evento
 	template_name = 'template/evento_form.html'
 	form_class = EventoForm
-	success_message = "Evento Creado con Exito!"
 	success_url = reverse_lazy('principal')
+	
+class RecursoUpdate(UpdateView):
+	model = recurso
+	template_name = 'template/recurso_form.html'
+	form_class = RecursoForm
+	success_url = reverse_lazy('recursoListar')
 
 class noticia_list(ListView):
 	model = noticia
 	template_name='template/noticia_listar.html'
-	paginate_by = 2
+	paginate_by = 4
+
+class recurso_list(ListView):
+	model = recurso
+	template_name = 'template/recurso_listar.html'
+	paginate_by = 4

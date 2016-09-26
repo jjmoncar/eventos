@@ -13,7 +13,7 @@ class noticia(models.Model):
 	tags = models.CharField(max_length=60)
 	autor = models.CharField(max_length=60)
 	fecha = models.DateField(null=False, blank=False)
-	estatus = models.BooleanField
+	estatus = models.BooleanField()
 	valoracion = models.IntegerField(null=False,blank=False)
 
 	def __str__(self):
@@ -28,7 +28,7 @@ class recurso(models.Model):
 	video = models.FileField(upload_to='videosRecurso/%Y/%m/%d')
 	tags = models.CharField(max_length=60)
 	autor = models.CharField(max_length=60)
-	estatus = models.BooleanField
+	estatus = models.BooleanField()
 	valoracion = models.IntegerField(null=False,blank=False)
 	tipo = models.CharField(max_length=60)
 	
@@ -44,7 +44,7 @@ class evento(models.Model):
 	video = models.FileField(upload_to='videosEvento/%Y/%m/%d')
 	tags = models.CharField(max_length=60)
 	autor = models.CharField(max_length=60)
-	estatus = models.BooleanField
+	estatus = models.BooleanField()
 	valoracion = models.IntegerField()
 	fecha = models.DateField(null=False, blank=False)
 	coordenada1 = models.CharField(max_length=60)

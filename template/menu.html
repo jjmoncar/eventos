@@ -11,9 +11,10 @@
   <div class="nav-wrapper">
     <a href="#!" class="brand-logo">Logo</a>
     <ul class="right hide-on-med-and-down">
+	  <li><a href="{% url 'principal' %}">Inicio</a></li>
       <li><a href="{% url 'noticiaListar' %}">Noticias</a></li>
       <li><a href="#">Eventos</a></li>
-      <li><a href="#">Apps</a></li>
+      <li><a href="{% url 'recursoListar' %}">Apps</a></li>
       <!-- Dropdown Trigger -->
       <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Opciones<i class="material-icons right">arrow_drop_down</i></a></li>
     </ul>

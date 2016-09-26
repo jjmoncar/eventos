@@ -1,6 +1,9 @@
 {% extends "template/base.html" %}
 
 {% block content %}
+
+{% include "template/menu.html" %}
+
 <form method="post" enctype='multipart/form-data'>
 {% csrf_token %}
 

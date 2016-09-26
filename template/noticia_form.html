@@ -4,21 +4,21 @@
 {% include "template/menu.html" %}
 
 <div class="container">
-<form method="post" enctype='multipart/form-data'>
+<form method="post" enctype="multipart/form-data">
 {% csrf_token %}
 
 <div class="row">
 	<div class="input-field col s6">
 		<i class="material-icons prefix">edit</i>
-          <input id="id" type="text" class="validate" name="id">
-          <label for="id">id:</label>
+          <input id="id_noticias" type="text" class="validate" name="id_noticias" value="{{ object.id_noticias }}">
+          <label for="id_noticias">id:</label>
 	</div>
 </div>
 
 <div class="row">
 	<div class="input-field col s6">
 		<i class="material-icons prefix">perm_identity</i>
-          <input id="titulo" type="text" class="validate" name="titulo">
+          <input id="titulo" type="text" class="validate" name="titulo" value="{{ object.titulo }}">
           <label for="titulo">Titulo:</label>
 	</div>
 </div>
@@ -26,7 +26,7 @@
 <div class="row">
 	<div class="input-field col s6">
 		<i class="material-icons prefix">group</i>
-          <input id="sub_titulo" type="text" class="validate" name="sub-titulo">
+          <input id="sub_titulo" type="text" class="validate" name="sub_titulo" value="{{ object.sub_titulo }}">
           <label for="sub_titulo">Sub Titulo:</label>
 	</div>
 </div>
@@ -34,7 +34,7 @@
 <div class="row">
 	<div class="input-field col s6">
 		<i class="material-icons prefix">email</i>
-		  <textarea id="descripcion" name="descripcion" class="validate" col="10" rows="10"></textarea>
+		  <textarea id="descripcion" name="descripcion" class="validate" col="10" rows="10">{{ object.descripcion }}</textarea>
           <label for="descripcion">Descripcion:</label>
 	</div>
 </div>
@@ -58,7 +58,7 @@
 <div class="row">
 	<div class="input-field col s6">
 		<i class="material-icons prefix">done_all</i>
-          <input id="tags" type="text" class="validate" name="tags">
+          <input id="tags" type="text" class="validate" name="tags" value="{{ object.tags }}">
           <label for="tags">Tags:</label>
 	</div>
 </div>
@@ -66,7 +66,7 @@
 <div class="row">
 	<div class="input-field col s6">
 		<i class="material-icons prefix">done_all</i>
-          <input id="autor" type="text" class="validate" name="autor">
+          <input id="autor" type="text" class="validate" name="autor" value="{{ user.first_name|upper }} {{ user.last_name|upper }}" readonly="True">
           <label for="autor">Autor:</label>
 	</div>
 </div>
@@ -74,7 +74,7 @@
 <div class="row">
 	<div class="input-field col s6">
 		<i class="material-icons prefix">done_all</i>
-          <input id="fecha" type="text" class="validate" name="fecha">
+          <input id="fecha" type="date" class="validate" name="fecha" value="{{ object.fecha }}">
           <label for="fecha">Fecha:</label>
 	</div>
 </div>
@@ -82,7 +82,15 @@
 <div class="row">
 	<div class="input-field col s6">
 		<i class="material-icons prefix">done_all</i>
-          <input id="valoracion" type="number" class="validate" name="valoracion">
+          <input id="estatus" type="checkbox" class="validate" name="estatus">
+          <label for="estatus">Estatus:</label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col s6">
+		<i class="material-icons prefix">done_all</i>
+          <input id="valoracion" type="number" class="validate" name="valoracion" value="{{ object.valorarion }}">
           <label for="valoracion">Valoración:</label>
 	</div>
 </div>

@@ -3,12 +3,13 @@
 {% block content %}
 {% include "template/menu.html" %}
 
-<h2>Lista de Noticias</h2>
+<h2>Lista de Recursos</h2>
 
-<a class="waves-effect waves-light btn" href="{% url 'NuevaNoticia' %}"><i class="material-icons right">library_add</i>Agregar</a>
+<a class="waves-effect waves-light btn" href="{% url 'nuevoRecurso' %}"><i class="material-icons right">library_add</i>Agregar</a>
 
 {% if object_list %}
-<table class="responsive-table display">
+
+<table class="table table-bordered">
 	<thead>
 		<tr>
 			<td>Id</td>
@@ -16,24 +17,23 @@
 			<td>Subtitulo</td>
 			<td>Descripción</td>
 			<td>Autor</td>
-			<td>Fecha</td>
 			<td>Valoración</td>
+			<td>Tipo</td>
 			<td>Acciones</td>
 		</tr>
 	</thead>
 	<tbody>
-
-		{% for consultaNoticia in object_list %}
+		{% for consultaRecurso in object_list %}
 		<tr>
-			<td>{{ consultaNoticia.id_noticias }}</td>
-			<td>{{ consultaNoticia.titulo.upper }}</td>
-			<td>{{ consultaNoticia.sub_titulo }}</td>
-			<td>{{ consultaNoticia.descripcion }}</td>
-			<td>{{ consultaNoticia.autor }}</td>
-			<td>{{ consultaNoticia.fecha }}</td>
-			<td>{{ consultaNoticia.valoracion }}</td>
+			<td>{{ consultaRecurso.id_recurso }}</td>
+			<td>{{ consultaRecurso.titulo.upper }}</td>
+			<td>{{ consultaRecurso.sub_titulo }}</td>
+			<td>{{ consultaRecurso.descripcion }}</td>
+			<td>{{ consultaRecurso.autor }}</td>
+			<td>{{ consultaRecurso.valoracion }}</td>
+			<td>{{ consultaRecurso.tipo }}</td>
 			<td>
-				<a class="btn waves-effect waves-light" href="{% url 'noticiaEditar' pk=consultaNoticia.id_noticias %}"><i class="material-icons right">edit</i>Editar</a>
+				<a class="btn waves-effect waves-light" href="{% url 'recursoEditar' pk=consultaRecurso.id_recurso %}"><i class="material-icons right">edit</i>Editar</a>
 				<a class="btn waves-effect waves-light" href="#"><i class="material-icons right">delete</i>Inhabilitar</a>
 			</td>
 		</tr>
